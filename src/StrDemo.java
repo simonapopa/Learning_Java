@@ -12,8 +12,8 @@ public class StrDemo {
 		System.out.println("Carriage\r return");
 		System.out.println("Form\f feed");
 		System.out.println("Horizontal\t tab");
-		System.out.println("back\bspace");		
-		System.out.println("back\bspace");	
+		System.out.println("back\bspace");
+		System.out.println("back\bspace");
 	}
 
 }
