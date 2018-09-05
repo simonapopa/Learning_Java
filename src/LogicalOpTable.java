@@ -1,69 +1,67 @@
 
 public class LogicalOpTable {
-	public static void main(String args[]) {
-		int p, q;
-		boolean i;
-		boolean p1, q1;	
+	public static void main(String args[]) {		
+		boolean p, q;	
 
-		p = 0;
-		q = 0;
-		i = false;
+		p = false;
+		q = false;	
+		System.out.println("Logical table with boolean values:");
 		System.out.println("| p\t| q\t| p & q\t| p | q\t| p ^ q\t|!p     |");
 		System.out.println("|------\t|------\t|------\t|------\t|------\t|-------|");
 		System.out.println(
-				"|" + p + "\t|" + q + "\t|" + (p & q) + "\t|" + (p | q) + "\t|" + (p ^ q) + "\t|" + (!i) + "\t|");
+				"|" + p + "\t|" + q + "\t|" + (p & q) + "\t|" + (p | q) + "\t|" + (p ^ q) + "\t|" + (!p) + "\t|");
 
-		p = 1;
-		q = 1;
-		i = true;
+		p = true;
+		q = true;
 		System.out.println("|------\t|------\t|------\t|------\t|------\t|-------|");
 		System.out.println(
-				"|" + p + "\t|" + q + "\t|" + (p & q) + "\t|" + (p | q) + "\t|" + (p ^ q) + "\t|" + (!i) + "\t|");
+				"|" + p + "\t|" + q + "\t|" + (p & q) + "\t|" + (p | q) + "\t|" + (p ^ q) + "\t|" + (!p) + "\t|");
 
-		p = 0;
-		q = 1;
-		i = false;
+		p = false;
+		q = true;
 		System.out.println("|------\t|------\t|------\t|------\t|------\t|-------|");
 		System.out.println(
-				"|" + p + "\t|" + q + "\t|" + (p & q) + "\t|" + (p | q) + "\t|" + (p ^ q) + "\t|" + (!i) + "\t|");
+				"|" + p + "\t|" + q + "\t|" + (p & q) + "\t|" + (p | q) + "\t|" + (p ^ q) + "\t|" + (!p) + "\t|");
 
-		p = 1;
-		q = 0;
-		i = true;
+		p = true;
+		q = false;
 		System.out.println("|------\t|------\t|------\t|------\t|------\t|-------|");
 		System.out.println(
-				"|" + p + "\t|" + q + "\t|" + (p & q) + "\t|" + (p | q) + "\t|" + (p ^ q) + "\t|" + (!i) + "\t|");
+				"|" + p + "\t|" + q + "\t|" + (p & q) + "\t|" + (p | q) + "\t|" + (p ^ q) + "\t|" + (!p) + "\t|");
 		System.out.println();
 		
 		
-		
-				
-		p1 = false;
-		q1 = false;
+		p = false;
+		q = false;		
+		System.out.println("Logical table with 1 & 0 values:");
 		System.out.println("| p\t| q\t| p & q\t| p | q\t| p ^ q\t|!p     |");
 		System.out.println("|------\t|------\t|------\t|------\t|------\t|-------|");
-		System.out.println(
-				"|" + p1 + "\t|" + q1 + "\t|" + (p1 & q1) + "\t|" + (p1 | q1) + "\t|" + (p1 ^ q1) + "\t|" + (!p1) + "\t|");
-		//System.out.printf("|" + p1 + "\t|" + q1 + "\t|", p1 && q1 ? 1 : 0,"\t|",p1 || q1 ? 1 : 0,"\t|" + (p1 ^ q1) + "\t|",!p1 ? 1:0,"\t|");
+		System.out.println(				
+				"|" + booleanToInt(p) + "\t|" + booleanToInt(q) + "\t|" + booleanToInt(p & q) + "\t|" + booleanToInt(p | q) + "\t|" + booleanToInt(p ^ q) + "\t|" + booleanToInt(!p) + "\t|");
 
-		p1 = true;
-		q1 = true;
+		p = true;
+		q = true;
 		System.out.println("|------\t|------\t|------\t|------\t|------\t|-------|");
 		System.out.println(
-				"|" + p1 + "\t|" + q1 + "\t|" + (p1 & q1) + "\t|" + (p1 | q1) + "\t|" + (p1 ^ q1) + "\t|" + (!p1) + "\t|");
+				"|" + booleanToInt(p) + "\t|" + booleanToInt(q) + "\t|" + booleanToInt(p & q) + "\t|" + booleanToInt(p | q) + "\t|" + booleanToInt(p ^ q) + "\t|" + booleanToInt(!p) + "\t|");
 
-		p1 = false;
-		q1 = true;
+		p = false;
+		q = true;
 		System.out.println("|------\t|------\t|------\t|------\t|------\t|-------|");
 		System.out.println(
-				"|" + p1 + "\t|" + q1 + "\t|" + (p1 & q1) + "\t|" + (p1 | q1) + "\t|" + (p1 ^ q1) + "\t|" + (!p1) + "\t|");
+				"|" + booleanToInt(p) + "\t|" + booleanToInt(q) + "\t|" + booleanToInt(p & q) + "\t|" + booleanToInt(p | q) + "\t|" + booleanToInt(p ^ q) + "\t|" + booleanToInt(!p) + "\t|");
 
-		p1 = true;
-		q1 = false;
+		p = true;
+		q = false;
 		System.out.println("|------\t|------\t|------\t|------\t|------\t|-------|");
 		System.out.println(
-				"|" + p1 + "\t|" + q1 + "\t|" + (p1 & q1) + "\t|" + (p1 | q1) + "\t|" + (p1 ^ q1) + "\t|" + (!p1) + "\t|");
-				
-	
+				"|" + booleanToInt(p) + "\t|" + booleanToInt(q) + "\t|" + booleanToInt(p & q) + "\t|" + booleanToInt(p | q) + "\t|" + booleanToInt(p ^ q) + "\t|" + booleanToInt(!p) + "\t|");
+		
 	}
+	
+	public static int booleanToInt(boolean value) {
+		return value ? 1 : 0;
+	}
+				
+		
 }

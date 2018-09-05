@@ -2,37 +2,36 @@
 public class LogicalOpTableBinary {
 
 	public static void main(String[] args) {
-		int p, q;
-		boolean i;
-
-		p = 0;
-		q = 0;
-		i = false;
+		boolean p, q;	
+		
+		p = false;
+		q = false;		
 		System.out.println("| p\t| q\t| p & q\t| p | q\t| p ^ q\t|!p     |");
 		System.out.println("|------\t|------\t|------\t|------\t|------\t|-------|");
+		System.out.println(				
+				"|" + booleanToInt(p) + "\t|" + booleanToInt(q) + "\t|" + booleanToInt(p & q) + "\t|" + booleanToInt(p | q) + "\t|" + booleanToInt(p ^ q) + "\t|" + booleanToInt(!p) + "\t|");
+
+		p = true;
+		q = true;
+		System.out.println("|------\t|------\t|------\t|------\t|------\t|-------|");
 		System.out.println(
-				"|" + p + "\t|" + q + "\t|" + (p & q) + "\t|" + (p | q) + "\t|" + (p ^ q) + "\t|" + (!i) + "\t|");
+				"|" + booleanToInt(p) + "\t|" + booleanToInt(q) + "\t|" + booleanToInt(p & q) + "\t|" + booleanToInt(p | q) + "\t|" + booleanToInt(p ^ q) + "\t|" + booleanToInt(!p) + "\t|");
+
+		p = false;
+		q = true;
+		System.out.println("|------\t|------\t|------\t|------\t|------\t|-------|");
+		System.out.println(
+				"|" + booleanToInt(p) + "\t|" + booleanToInt(q) + "\t|" + booleanToInt(p & q) + "\t|" + booleanToInt(p | q) + "\t|" + booleanToInt(p ^ q) + "\t|" + booleanToInt(!p) + "\t|");
+
+		p = true;
+		q = false;
+		System.out.println("|------\t|------\t|------\t|------\t|------\t|-------|");
+		System.out.println(
+				"|" + booleanToInt(p) + "\t|" + booleanToInt(q) + "\t|" + booleanToInt(p & q) + "\t|" + booleanToInt(p | q) + "\t|" + booleanToInt(p ^ q) + "\t|" + booleanToInt(!p) + "\t|");
 		
-		p = 1;
-		q = 1;
-		i = true;
-		System.out.println("|------\t|------\t|------\t|------\t|------\t|-------|");
-		System.out.println(
-				"|" + p + "\t|" + q + "\t|" + (p & q) + "\t|" + (p | q) + "\t|" + (p ^ q) + "\t|" + (!i) + "\t|");
-
-		p = 0;
-		q = 1;
-		i = false;
-		System.out.println("|------\t|------\t|------\t|------\t|------\t|-------|");
-		System.out.println(
-				"|" + p + "\t|" + q + "\t|" + (p & q) + "\t|" + (p | q) + "\t|" + (p ^ q) + "\t|" + (!i) + "\t|");
-
-		p = 1;
-		q = 0;
-		i = true;
-		System.out.println("|------\t|------\t|------\t|------\t|------\t|-------|");
-		System.out.println(
-				"|" + p + "\t|" + q + "\t|" + (p & q) + "\t|" + (p | q) + "\t|" + (p ^ q) + "\t|" + (!i) + "\t|");
 	}
-
+	
+	public static int booleanToInt(boolean value) {
+		return value ? 1 : 0;
+	}
 }
