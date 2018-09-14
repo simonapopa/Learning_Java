@@ -6,7 +6,7 @@ public class Help {
 
 		char answer;
 
-		System.out.println("Help on: \n    1. if \n    2. switch");
+		System.out.println("Help on: \n    1. if \n    2. switch \n    3. countdown");
 		System.out.print("Choose one: ");
 
 		answer = (char) System.in.read();
@@ -26,6 +26,10 @@ public class Help {
 			System.out.println("\t...");
 			System.out.println("\tdefault:\n\t\t statement sequence \n}");
 			break;
+		case '3':
+			int x;
+			for (x = 0; x >= -5; x--)
+				System.out.println(x);
 
 		default:
 			System.out.print("Value entered does not exist.");
