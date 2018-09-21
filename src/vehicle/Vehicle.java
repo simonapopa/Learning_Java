@@ -14,4 +14,15 @@ public class Vehicle {
 
 	}
 
+	boolean isEven(int x) {
+		if (x % 2 == 0)
+			return true;
+		else
+			return false;
+	}
+
+	double fuelneeded(int miles) {
+		return (double) miles / mpg;
+	}
+
 }
