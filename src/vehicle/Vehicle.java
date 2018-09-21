@@ -9,4 +9,9 @@ public class Vehicle {
 
 	}
 
+	int ranges() {
+		return fuelcap * mpg;
+
+	}
+
 }
